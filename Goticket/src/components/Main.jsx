@@ -1,108 +1,92 @@
 import React, { useState } from 'react';
-import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { Button } from 'react-native-paper';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 
-const Main = () => {
-    const [origen, setOrigen] = useState('');
-    const [destino, setDestino] = useState('');
-    const [fecha, setFecha] = useState('');
+const MainScreen = () => {
+  const buss = [
+    {
+      id: 1,
+      titulo: "Título ",
+      body: "Cuerpo",
+      usuario_id: { id: 1, nombre: "John Doe" },
+    },
+    {
+      id: 2,
+      titulo: "Título",
+      body: "Cuerpo",
+      usuario_id: { id: 2, nombre: "Jane Doe" },
+    },
+    // Agrega más buss según tus necesidades
+  ];
 
-    const handleBuscar = () => {
-        console.log('Origen:', origen);
-        console.log('Destino:', destino);
-        console.log('Fecha:', fecha);
-    };
-
-    return (
-        <View style={styles.outerContainer}>
-      
-            <View style={styles.iconContainer}>
-                <Icon name="ios-bus" size={80} color="#fff" />
-                <Text style={styles.title1}>GoTicket</Text>
-                
-
-            </View>
-
-            <View style={styles.container}>
-                <Text style={styles.title2}>Where we go?</Text>
-
-                <TextInput
-                    style={styles.input}
-                    placeholder="Ciudad de Origen"
-                    value={origen}
-                    onChangeText={text => setOrigen(text)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Ciudad de Destino"
-                    value={destino}
-                    onChangeText={text => setDestino(text)}
-                />
-                <TextInput
-                    style={styles.input}
-                    placeholder="Fecha de Viaje"
-                    value={fecha}
-                    onChangeText={text => setFecha(text)}
-                />
-
-                <TouchableOpacity onPress={handleBuscar} style={styles.roundButton}>
-                    <Icon name="ios-search" size={25} color="#fff" />
-                </TouchableOpacity>
-            </View>
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      {buss.map((bus) => (
+        <View key={bus.id} style={styles.busCard}>
+          <Text style={styles.busTitle}>{bus.titulo}</Text>
+          <Text>{bus.body}</Text>
+          <TouchableOpacity onPress={() => { /* Acción cuando se presiona el nombre del usuario */ }}>
+            <Text style={styles.usuarioNombre}>{bus.usuario_id.nombre}</Text>
+          </TouchableOpacity>
+          <TouchableOpacity style={styles.button}>
+            <Text style={styles.buttonText}>ver Colectivo</Text>
+          </TouchableOpacity>
         </View>
-    )
-}
+      ))}
+      <View style={styles.pagination}>
+        <TouchableOpacity>
+          <Text style={styles.paginationText}>«</Text>
+        </TouchableOpacity>
+        <Text style={styles.paginationText}>1</Text>
+        <Text style={styles.paginationText}>2</Text>
+        <Text style={styles.paginationText}>3</Text>
+        <Text style={styles.paginationText}>... 33</Text>
+        <TouchableOpacity>
+          <Text style={styles.paginationText}>»</Text>
+        </TouchableOpacity>
+      </View>
+    </ScrollView>
+  );
+};
 
 const styles = StyleSheet.create({
-    outerContainer: {
-        flex: 1,
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "#FF4500",
-    },
-    iconContainer: {
-        marginBottom: 20,
-       alignItems: "center",
-    },
-
-    container: {
-        width: '80%',
-        backgroundColor: '#fff',
-        padding: 20,
-        borderRadius: 10,
-        alignItems: 'center',
-    },
-    title1: {
-        fontSize: 30,
-        fontWeight: "bold",
-        marginBottom: 30,
-        color: "#ffff"
-    },
-    title2: {
-        fontSize: 30,
-        fontWeight: "bold",
-        marginBottom: 20,
-    },
-
-    input: {
-        width: '100%',
-        height: 40,
-        borderColor: 'gray',
-        borderWidth: 1,
-        marginBottom: 10,
-        paddingHorizontal: 10,
-    },
-    roundButton: {
-        backgroundColor: "#FF4500",
-        borderRadius: 50,
-        paddingHorizontal: 20,
-        paddingVertical: 10,
-        marginTop: 10,
-        flexDirection: "row",
-        alignItems: "center",
-        justifyContent: "center",
-    },
+  container: {
+    padding: 16,
+    backgroundColor: "#fff",
+  },
+  busCard: {
+    borderWidth: 1,
+    borderColor: "#ccc",
+    padding: 8,
+    borderRadius: 8,
+    marginBottom: 8,
+  },
+  busTitle: {
+    fontSize: 18,
+    fontWeight: "bold",
+    marginBottom: 4,
+  },
+  usuarioNombre: {
+    color: "#007bff", // Color de enlace (azul)
+  },
+  button: {
+    backgroundColor: "#007bff",
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 4,
+    alignItems: "center",
+    marginTop: 8,
+  },
+  buttonText: {
+    color: "#fff",
+  },
+  pagination: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: 16,
+  },
+  paginationText: {
+    marginHorizontal: 8,
+  },
 });
 
-export default Main;
+export default MainScreen;
