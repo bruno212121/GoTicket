@@ -1,17 +1,14 @@
 import React, { useState } from 'react';
 import { Text, View, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
-import { Button } from 'react-native-paper';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const Main = () => {
+const Main = ({navigation}) => {
     const [origen, setOrigen] = useState('');
     const [destino, setDestino] = useState('');
     const [fecha, setFecha] = useState('');
 
     const handleBuscar = () => {
-        console.log('Origen:', origen);
-        console.log('Destino:', destino);
-        console.log('Fecha:', fecha);
+        navigation.navigate('Details')
     };
 
     return (
