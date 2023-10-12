@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
-import styles from './Main.styles';
-import StyledText from '../StyledText';
+import styles from '../Styles/Main.styles';
+import StyledText from './StyledText';
 
 const MainScreen = () => {
 
