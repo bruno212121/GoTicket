@@ -2,10 +2,8 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-      padding: 16,
+      padding: 25,
       backgroundColor: "#BA55D3",
-      marginTop: 50,
-      paddingBottom: 100,
     },
     busCard: {
       borderWidth: 1,
@@ -42,6 +40,13 @@ const styles = StyleSheet.create({
     },
     buttonText: {
       color: "#fff",
+    },
+    profileButtonContainer: {
+      position: "absolute",
+      top: 0,
+      right: 9,
+      marginTop: 10,
+      marginright: 100,
     },
   });
 

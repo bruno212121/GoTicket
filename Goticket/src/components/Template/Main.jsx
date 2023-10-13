@@ -2,8 +2,10 @@ import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import styles from '../Styles/Main.styles';
 import StyledText from './StyledText';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-const MainScreen = () => {
+const MainScreen = (navigation) => {
+
 
   const buss = [
     {
@@ -65,11 +67,12 @@ const MainScreen = () => {
       {buss.map((bus) => (
         <View key={bus.id} style={styles.busCard}>
           <Text style={styles.busTitle}>{bus.titulo}</Text>
-          <Text>Salida: {bus.salida}</Text>
-          <Text>Llegada: {bus.llegada}</Text>
-          <Text>Comodidad: {bus.comodidad}</Text>
+          <Text>Origin: {bus.salida}</Text>
+          <Text>Destination: {bus.llegada}</Text>
+          <Text>Comfort: {bus.comodidad}</Text>
+          <Text>Info: {bus.info}</Text>
           <TouchableOpacity style={styles.button}>
-            <StyledText color='bold' style={styles.button}>Comprar</StyledText>
+            <StyledText color='bold' style={styles.button}>BUY</StyledText>
           </TouchableOpacity>
         </View>
       ))}
