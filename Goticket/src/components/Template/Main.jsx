@@ -6,7 +6,6 @@ import Icon from 'react-native-vector-icons/Ionicons';
 
 const MainScreen = (navigation) => {
 
-
   const buss = [
     {
       id: 1,
@@ -53,6 +52,11 @@ const MainScreen = (navigation) => {
 
   const [currentPage, setCurrentPage] = useState(1);
 
+  const handleBus = () => {
+    navigation.navigate('Bus')
+  };
+
+
 
   const handlePagination = (direction) => {
     if (direction === 'prev' && currentPage > 1) {
@@ -61,23 +65,23 @@ const MainScreen = (navigation) => {
       setCurrentPage(currentPage + 1);
     }
   };
-
+  
   return (
     <ScrollView contentContainerStyle={styles.container}>
       {buss.map((bus) => (
         <View key={bus.id} style={styles.busCard}>
           <Text style={styles.busTitle}>{bus.titulo}</Text>
-          <Text>Origin: {bus.salida}</Text>
-          <Text>Destination: {bus.llegada}</Text>
-          <Text>Comfort: {bus.comodidad}</Text>
-          <Text>Info: {bus.info}</Text>
-          <TouchableOpacity style={styles.button}>
-            <StyledText color='bold' style={styles.button}>BUY</StyledText>
+          <Text>Salida: {bus.salida}</Text>
+          <Text>Llegada: {bus.llegada}</Text>
+          <Text>Comodidad: {bus.comodidad}</Text>
+          <TouchableOpacity onPress={handleBus} style={styles.button}>
+            <StyledText color='bold' style={styles.button}>Comprar</StyledText>
           </TouchableOpacity>
         </View>
       ))}
     </ScrollView>
   );
 };
+
 
 export default MainScreen;
