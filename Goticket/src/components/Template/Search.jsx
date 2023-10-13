@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     },
     iconContainer: {
         marginBottom: 20,
-       alignItems: "center",
+        alignItems: "center",
     },
 
     container: {

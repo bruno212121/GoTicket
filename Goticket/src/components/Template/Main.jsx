@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, ScrollView, StyleSheet } from 'react-nati
 import styles from '../Styles/Main.styles';
 import StyledText from './StyledText';
 
-const MainScreen = () => {
+const MainScreen = ({navigation}) => {
 
   const buss = [
     {
@@ -51,6 +51,11 @@ const MainScreen = () => {
 
   const [currentPage, setCurrentPage] = useState(1);
 
+  const handleBus = () => {
+    navigation.navigate('Bus')
+  };
+
+
 
   const handlePagination = (direction) => {
     if (direction === 'prev' && currentPage > 1) {
@@ -68,7 +73,7 @@ const MainScreen = () => {
           <Text>Salida: {bus.salida}</Text>
           <Text>Llegada: {bus.llegada}</Text>
           <Text>Comodidad: {bus.comodidad}</Text>
-          <TouchableOpacity style={styles.button}>
+          <TouchableOpacity onPress={handleBus} style={styles.button}>
             <StyledText color='bold' style={styles.button}>Comprar</StyledText>
           </TouchableOpacity>
         </View>
