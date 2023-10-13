@@ -4,7 +4,7 @@ import styles from '../Styles/Main.styles';
 import StyledText from './StyledText';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const MainScreen = (navigation) => {
+const MainScreen = ({navigation}) => {
 
   const buss = [
     {
@@ -55,8 +55,6 @@ const MainScreen = (navigation) => {
   const handleBus = () => {
     navigation.navigate('Bus')
   };
-
-
 
   const handlePagination = (direction) => {
     if (direction === 'prev' && currentPage > 1) {

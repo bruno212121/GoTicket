@@ -17,8 +17,6 @@ const BusScreen = () => {
             }
         ];
 
-        
-
 
         return (
             <ScrollView contentContainerStyle={styles.container}>

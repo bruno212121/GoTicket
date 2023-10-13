@@ -16,7 +16,7 @@ const Routes = () => {
       <Stack.Navigator initialRouteName="Home">
 
         <Stack.Screen name="Home" component={Main} />
-        <Stack.Screen name="Details" component={MainScreen} />
+        <Stack.Screen name="Search" component={MainScreen} />
         <Stack.Screen name="Bus" component={BusScreen} />
         <Stack.Screen name="Profile" component={Profile} />
 
