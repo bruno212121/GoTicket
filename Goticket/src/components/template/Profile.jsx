@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, Text, Image, TouchableOpacity } from 'react-native';
-import styles from '../Styles/Profile.styles';
+import styles from '../styles/Profile.styles';
 
 const UserProfile = () => {
   const usuario = {
