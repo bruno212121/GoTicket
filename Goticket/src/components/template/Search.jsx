@@ -26,7 +26,7 @@ const Main = ({navigation}) => {
               </TouchableOpacity>
             </View>
           <View style={styles.iconContainer}>
-            <Icon name="ios-bus" size={80} color="#fff" />
+            <Icon name="ios-bus" size={80} color="#BA55D3" />
             <Text style={styles.title1}>GoTicket</Text>
           </View>
           

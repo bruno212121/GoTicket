@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 20,
-      backgroundColor: "#BA55D3",
+      backgroundColor: "#B9F3E4",
     },
     form: {
       padding: 16,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
       fontWeight: "bold",
       marginBottom: 20,
       marginTop: 10,
-      color: "#ffff"
+      color: "#BA55D3"
     },
     title2: {
       fontSize: 30,

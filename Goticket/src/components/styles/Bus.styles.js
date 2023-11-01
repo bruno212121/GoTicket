@@ -3,7 +3,7 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
   container: {
     padding: 16,
-    backgroundColor: "#BA55D3",
+    backgroundColor: "#B9F3E4",
     flex: 1,
   },
   busCard: {

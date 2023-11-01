@@ -28,7 +28,7 @@ const LoginScreen = ({navigation}) => {
     return (
         <View style={styles.container}>
           <View style={styles.header}>
-            <Icon name="ios-bus" size={80} color="#fff" />
+            <Icon name="ios-bus" size={80} color="#BA55D3" />
               <Text style={styles.title1}>GoTicket</Text>
           </View>
           <View style={styles.form}>

@@ -3,6 +3,9 @@ import { StyleSheet } from 'react-native';
 const styles = StyleSheet.create({
     container: {
       padding: 25,
+      backgroundColor: "#B9F3E4",
+    },
+    body: {
       backgroundColor: "#BA55D3",
     },
     busCard: {

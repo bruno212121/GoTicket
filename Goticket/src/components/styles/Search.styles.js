@@ -5,7 +5,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#BA55D3",
+        backgroundColor: "#B9F3E4",
     },
     iconContainer: {
         marginBottom: 20,
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: "bold",
         marginBottom: 30,
-        color: "#ffff"
+        color: "#BA55D3"
     },
     title2: {
         fontSize: 30,
