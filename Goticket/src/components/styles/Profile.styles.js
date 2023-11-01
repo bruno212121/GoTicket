@@ -4,7 +4,7 @@ const styles = StyleSheet.create({
     container: {
       flex: 1,
       padding: 25,
-      backgroundColor: "#BA55D3",
+      backgroundColor: "#B9F3E4",
     },
     header: {
       alignItems: "center",

@@ -17,14 +17,7 @@ const BusScreen = () => {
     }
   };
 
-  const logbuss = async () => {
-    try {
-      const resp = await ticketApi.get('/tripexpo');
-      console.log(resp);
-    } catch (error){
-      console.log(error)
-    }
-  }
+
 
   const buss = [
     {
@@ -38,9 +31,7 @@ const BusScreen = () => {
     }
   ];
 
-  useEffect(() => {
-    logbuss();
-  }, []);
+ 
 
   return (
     <ScrollView contentContainerStyle={styles.container}>
