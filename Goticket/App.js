@@ -1,9 +1,12 @@
 import React from 'react';
 import Routes from './src/navigation';
-import LoginSCreen from './src/components/template/Login';
-import RegisterScreen from './src/components/template/Register';
+import { GlobalStateProviders } from './src/contexts/Globalstate';
 
 export default function App() {
-  return <Routes/>;
+  return (
+    <GlobalStateProviders>
+      <Routes />
+    </GlobalStateProviders>
+  );
 }
 
