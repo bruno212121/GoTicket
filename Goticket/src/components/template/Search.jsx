@@ -5,16 +5,24 @@ import styles from "../styles/Search.styles";
 import StyledText from "./StyledText";
 import { GlobalStateContext } from "../../contexts/Globalstate";
 
-const Main = ({ navigation }) => {
-  const { origin, setOrigin, destination, setDestination, date, setDate } =
-    React.useContext(GlobalStateContext);
+export const Search = ({ navigation }) => {
+  const {
+    origin,
+    setOrigin,
+    destination,
+    setDestination,
+    date,
+    setDate,
+    user,
+    token,
+  } = React.useContext(GlobalStateContext);
 
   const handleBuscar = async () => {
     try {
       console.log("Origin: ", origin);
       console.log("Destination: ", destination);
       console.log("Date: ", date);
-      navigation.navigate("Search");
+      navigation.navigate("Home");
     } catch (error) {
       console.log("Error: ", error);
     }
@@ -69,5 +77,3 @@ const Main = ({ navigation }) => {
     </View>
   );
 };
-
-export default Main;
